@@ -10,6 +10,8 @@ public interface UserService {
 	UserResponseDto userSingup(UserRequestDto userRequestDto);
 
 	List<UserResponseDto> getAllUsers();
+
+	UserResponseDto getNameById(long id);
     
 	
 

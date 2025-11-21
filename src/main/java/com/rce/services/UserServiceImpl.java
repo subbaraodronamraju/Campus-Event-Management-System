@@ -58,6 +58,23 @@ public class UserServiceImpl implements UserService {
 		userResponseDto.setInterests(savedUser.getInterests());
 		return userResponseDto;
 	}
+
+
+
+	@Override
+	public UserResponseDto getNameById(long id) {
+	User user= new User();
+	User userById = userRepository.findById(id).get();
+	
+	
+		
+		
+		
+		
+		return null;
+	}
+	
+	
 	
 	
 
