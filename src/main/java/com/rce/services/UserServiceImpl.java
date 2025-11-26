@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import com.rce.dao.UserRepository;
 import com.rce.dto.UserRequestDto;
 import com.rce.dto.UserResponseDto;
+import com.rce.exceptions.NameNotFound;
 import com.rce.models.User;
 
 @Service
@@ -48,6 +49,13 @@ public class UserServiceImpl implements UserService {
 		
 		
 	}
+	@Override
+	public UserResponseDto getNameById(long id) {
+	  User savedUser = userRepository.findById(id)
+			        .orElseThrow(() -> new NameNotFound("Given Id Name is Not Found"+id));
+	return buildUserResponseDto(savedUser) ;
+	}
+
 	private UserResponseDto buildUserResponseDto(User savedUser) {
 		UserResponseDto userResponseDto = new UserResponseDto();
 		userResponseDto.setUserName(savedUser.getUserName());
@@ -61,17 +69,14 @@ public class UserServiceImpl implements UserService {
 
 
 
+	
+
+
+
 	@Override
-	public UserResponseDto getNameById(long id) {
-	User user= new User();
-	User userById = userRepository.findById(id).get();
-	
+	public void deleteUser(long id) {
 	
 		
-		
-		
-		
-		return null;
 	}
 	
 	

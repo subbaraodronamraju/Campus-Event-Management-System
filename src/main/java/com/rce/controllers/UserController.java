@@ -34,6 +34,10 @@ public class UserController {
 	   return userService.getNameById(id);
    }
 	
+	public void  deleteUser(long id) {
+		 userService.deleteUser(id); 
+		}
+	
 		
 	
 
