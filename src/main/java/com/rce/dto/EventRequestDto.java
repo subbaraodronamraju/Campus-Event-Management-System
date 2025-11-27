@@ -23,9 +23,9 @@ public class EventRequestDto {
 
     private String eventStatus;
     
-    private Long categoryId;
+    private long categoryId;
     
-    private Long createdById;
+    private long createdById;
 
    
     

@@ -51,9 +51,15 @@ public class UserServiceImpl implements UserService {
 	}
 	@Override
 	public UserResponseDto getNameById(long id) {
-	  User savedUser = userRepository.findById(id)
-			        .orElseThrow(() -> new NameNotFound("Given Id Name is Not Found"+id));
+	User savedUser = userRepository.findById(id)
+			               .orElseThrow(() -> new NameNotFound("Given Id Name is Not Found"+id));
 	return buildUserResponseDto(savedUser) ;
+	}
+	
+	@Override
+	public void deleteUser(long id) {
+	
+		
 	}
 
 	private UserResponseDto buildUserResponseDto(User savedUser) {
@@ -68,21 +74,5 @@ public class UserServiceImpl implements UserService {
 	}
 
 
-
-	
-
-
-
-	@Override
-	public void deleteUser(long id) {
-	
-		
-	}
-	
-	
-	
-	
-
-	
 
 }
