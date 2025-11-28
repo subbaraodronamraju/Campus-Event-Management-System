@@ -10,7 +10,14 @@ public class GlobalExceptionHandler {
 	public String NameNotFound(NameNotFound ex) {
 		return ex.getMessage();
 	}
-	
+	@ExceptionHandler(IdNotFoundExeception.class)
+	public String IdNotFoundExeception(IdNotFoundExeception ex) {
+		return ex.getMessage();
+	}
+	@ExceptionHandler(UserIdNotFoundExeception.class)
+	public String UserIdNotFoundExeption(UserIdNotFoundExeception ex) {
+		return ex.getMessage();
+	}
 	
 
 }

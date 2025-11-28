@@ -25,4 +25,10 @@ public class EventResponseDto {
 
     private String eventStatus;
     
+    private String categoryName;
+    
+    private String CreatedByName;
+    
+    private int totalRegistrations;
+    
 }

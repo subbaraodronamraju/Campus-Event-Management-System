@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.rce.dto.EventRequestDto;
 import com.rce.dto.EventResponseDto;
 import com.rce.services.EventService;
@@ -25,4 +24,4 @@ public class EventController {
 	   
    }
     
-}
+
