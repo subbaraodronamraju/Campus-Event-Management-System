@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
 		return ex.getMessage();
 	}
 	@ExceptionHandler(UserIdNotFoundExeception.class)
-	public String UserIdNotFoundExeption(UserIdNotFoundExeception ex) {
+	public String UserIdNotFoundExeception(UserIdNotFoundExeception ex) {
 		return ex.getMessage();
 	}
 	
