@@ -6,6 +6,10 @@ import com.rce.dto.EventResponseDto;
 public interface EventService {
 
 	EventResponseDto registerEvent(EventRequestDto eventRequestDto);
+
+	EventResponseDto getEventById(long id);
+
+	
 	
 	
 

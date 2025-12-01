@@ -18,6 +18,10 @@ public class GlobalExceptionHandler {
 	public String UserIdNotFoundExeception(UserIdNotFoundExeception ex) {
 		return ex.getMessage();
 	}
+	@ExceptionHandler(EventNotFoundExeception.class)
+	public String EventNotFoundExeception(EventNotFoundExeception ex) {
+		return ex.getMessage();
+	}
 	
 
 }
